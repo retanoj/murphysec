@@ -1,0 +1,909 @@
+{
+    "graph": {
+        "nodes": {
+            "0": {
+                "ref": "conanfile",
+                "id": "0",
+                "recipe": "Consumer",
+                "package_id": null,
+                "prev": null,
+                "remote": null,
+                "binary_remote": null,
+                "build_id": null,
+                "binary": null,
+                "invalid_build": false,
+                "info_invalid": null,
+                "name": null,
+                "user": null,
+                "channel": null,
+                "url": null,
+                "license": null,
+                "author": null,
+                "description": null,
+                "homepage": null,
+                "build_policy": null,
+                "upload_policy": null,
+                "revision_mode": "hash",
+                "provides": null,
+                "deprecated": null,
+                "win_bash": null,
+                "win_bash_run": null,
+                "default_options": null,
+                "options_description": null,
+                "version": null,
+                "topics": null,
+                "package_type": "unknown",
+                "settings": {
+                    "os": "Linux",
+                    "arch": "x86_64",
+                    "compiler": "gcc",
+                    "compiler.cppstd": "gnu14",
+                    "compiler.libcxx": "libstdc++11",
+                    "compiler.version": "7",
+                    "build_type": "Release"
+                },
+                "options": {},
+                "options_definitions": {},
+                "generators": [],
+                "system_requires": {},
+                "recipe_folder": null,
+                "source_folder": null,
+                "build_folder": null,
+                "generators_folder": null,
+                "package_folder": null,
+                "cpp_info": {
+                    "root": {
+                        "includedirs": [
+                            "include"
+                        ],
+                        "srcdirs": null,
+                        "libdirs": [
+                            "lib"
+                        ],
+                        "resdirs": null,
+                        "bindirs": [
+                            "bin"
+                        ],
+                        "builddirs": null,
+                        "frameworkdirs": null,
+                        "system_libs": null,
+                        "frameworks": null,
+                        "libs": null,
+                        "defines": null,
+                        "cflags": null,
+                        "cxxflags": null,
+                        "sharedlinkflags": null,
+                        "exelinkflags": null,
+                        "objects": null,
+                        "sysroot": null,
+                        "requires": null,
+                        "properties": null
+                    }
+                },
+                "label": "conanfile.txt",
+                "dependencies": {
+                    "1": {
+                        "ref": "glog/0.6.0",
+                        "run": "True",
+                        "libs": "True",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "True",
+                        "build": "False",
+                        "transitive_headers": "None",
+                        "transitive_libs": "None",
+                        "headers": "True",
+                        "package_id_mode": "None",
+                        "visible": "True"
+                    },
+                    "2": {
+                        "ref": "gflags/2.2.2",
+                        "run": "True",
+                        "libs": "True",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "False",
+                        "build": "False",
+                        "transitive_headers": "None",
+                        "transitive_libs": "None",
+                        "headers": "True",
+                        "package_id_mode": "None",
+                        "visible": "True"
+                    },
+                    "3": {
+                        "ref": "libunwind/1.6.2",
+                        "run": "True",
+                        "libs": "False",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "False",
+                        "build": "False",
+                        "transitive_headers": "None",
+                        "transitive_libs": "None",
+                        "headers": "False",
+                        "package_id_mode": "None",
+                        "visible": "True"
+                    },
+                    "4": {
+                        "ref": "xz_utils/5.4.2",
+                        "run": "True",
+                        "libs": "False",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "False",
+                        "build": "False",
+                        "transitive_headers": "None",
+                        "transitive_libs": "None",
+                        "headers": "False",
+                        "package_id_mode": "None",
+                        "visible": "True"
+                    },
+                    "5": {
+                        "ref": "zlib/1.2.13",
+                        "run": "True",
+                        "libs": "False",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "False",
+                        "build": "False",
+                        "transitive_headers": "None",
+                        "transitive_libs": "None",
+                        "headers": "False",
+                        "package_id_mode": "None",
+                        "visible": "True"
+                    }
+                },
+                "context": "host",
+                "test": false
+            },
+            "1": {
+                "ref": "glog/0.6.0#cb2e87e1b3c9567cc6a8a25de17ddd4e",
+                "id": "1",
+                "recipe": "Downloaded",
+                "package_id": "2b55707fd973475c0488408497efcc6d011373da",
+                "prev": null,
+                "remote": "conancenter",
+                "binary_remote": null,
+                "build_id": null,
+                "binary": "Missing",
+                "invalid_build": false,
+                "info_invalid": null,
+                "name": "glog",
+                "user": null,
+                "channel": null,
+                "url": "https://github.com/conan-io/conan-center-index",
+                "license": "BSD-3-Clause",
+                "author": null,
+                "description": "Google logging library",
+                "homepage": "https://github.com/google/glog/",
+                "build_policy": null,
+                "upload_policy": null,
+                "revision_mode": "hash",
+                "provides": null,
+                "deprecated": null,
+                "win_bash": null,
+                "win_bash_run": null,
+                "default_options": {
+                    "shared": false,
+                    "fPIC": true,
+                    "with_gflags": true,
+                    "with_threads": true,
+                    "with_unwind": true
+                },
+                "options_description": null,
+                "version": "0.6.0",
+                "topics": [
+                    "logging"
+                ],
+                "package_type": "shared-library",
+                "settings": {
+                    "os": "Linux",
+                    "arch": "x86_64",
+                    "compiler": "gcc",
+                    "compiler.cppstd": "gnu14",
+                    "compiler.libcxx": "libstdc++11",
+                    "compiler.version": "7",
+                    "build_type": "Release"
+                },
+                "options": {
+                    "shared": "True",
+                    "with_gflags": "True",
+                    "with_threads": "True",
+                    "with_unwind": "True"
+                },
+                "options_definitions": {
+                    "shared": [
+                        "True",
+                        "False"
+                    ],
+                    "with_gflags": [
+                        "True",
+                        "False"
+                    ],
+                    "with_threads": [
+                        "True",
+                        "False"
+                    ],
+                    "with_unwind": [
+                        "True",
+                        "False"
+                    ]
+                },
+                "generators": [],
+                "system_requires": {},
+                "recipe_folder": "/root/.conan2/p/glog8cc7018be4b57/e",
+                "source_folder": null,
+                "build_folder": null,
+                "generators_folder": null,
+                "package_folder": null,
+                "cpp_info": {
+                    "root": {
+                        "includedirs": [
+                            "include"
+                        ],
+                        "srcdirs": null,
+                        "libdirs": [
+                            "lib"
+                        ],
+                        "resdirs": null,
+                        "bindirs": [
+                            "bin"
+                        ],
+                        "builddirs": null,
+                        "frameworkdirs": null,
+                        "system_libs": null,
+                        "frameworks": null,
+                        "libs": null,
+                        "defines": null,
+                        "cflags": null,
+                        "cxxflags": null,
+                        "sharedlinkflags": null,
+                        "exelinkflags": null,
+                        "objects": null,
+                        "sysroot": null,
+                        "requires": null,
+                        "properties": null
+                    }
+                },
+                "label": "glog/0.6.0",
+                "dependencies": {
+                    "2": {
+                        "ref": "gflags/2.2.2",
+                        "run": "True",
+                        "libs": "True",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "True",
+                        "build": "False",
+                        "transitive_headers": "True",
+                        "transitive_libs": "True",
+                        "headers": "True",
+                        "package_id_mode": "minor_mode",
+                        "visible": "True"
+                    },
+                    "3": {
+                        "ref": "libunwind/1.6.2",
+                        "run": "True",
+                        "libs": "True",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "True",
+                        "build": "False",
+                        "transitive_headers": "None",
+                        "transitive_libs": "None",
+                        "headers": "True",
+                        "package_id_mode": "minor_mode",
+                        "visible": "True"
+                    },
+                    "4": {
+                        "ref": "xz_utils/5.4.2",
+                        "run": "True",
+                        "libs": "False",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "False",
+                        "build": "False",
+                        "transitive_headers": "None",
+                        "transitive_libs": "None",
+                        "headers": "False",
+                        "package_id_mode": "None",
+                        "visible": "True"
+                    },
+                    "5": {
+                        "ref": "zlib/1.2.13",
+                        "run": "True",
+                        "libs": "False",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "False",
+                        "build": "False",
+                        "transitive_headers": "None",
+                        "transitive_libs": "None",
+                        "headers": "False",
+                        "package_id_mode": "None",
+                        "visible": "True"
+                    },
+                    "6": {
+                        "ref": "cmake/3.27.0",
+                        "run": "True",
+                        "libs": "False",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "True",
+                        "build": "True",
+                        "transitive_headers": "None",
+                        "transitive_libs": "None",
+                        "headers": "False",
+                        "package_id_mode": "None",
+                        "visible": "False"
+                    }
+                },
+                "context": "host",
+                "test": false
+            },
+            "2": {
+                "ref": "gflags/2.2.2#48d1262ffac8d30c3224befb8275a533",
+                "id": "2",
+                "recipe": "Downloaded",
+                "package_id": "8985ac063c5bd577d6b14dc5f60fccc9f3ff54a1",
+                "prev": null,
+                "remote": "conancenter",
+                "binary_remote": null,
+                "build_id": null,
+                "binary": "Missing",
+                "invalid_build": false,
+                "info_invalid": null,
+                "name": "gflags",
+                "user": null,
+                "channel": null,
+                "url": "https://github.com/conan-io/conan-center-index",
+                "license": "BSD-3-Clause",
+                "author": null,
+                "description": "The gflags package contains a C++ library that implements commandline flags processing",
+                "homepage": "https://github.com/gflags/gflags",
+                "build_policy": null,
+                "upload_policy": null,
+                "revision_mode": "hash",
+                "provides": null,
+                "deprecated": null,
+                "win_bash": null,
+                "win_bash_run": null,
+                "default_options": {
+                    "shared": false,
+                    "fPIC": true,
+                    "nothreads": true,
+                    "namespace": "gflags"
+                },
+                "options_description": null,
+                "version": "2.2.2",
+                "topics": [
+                    "cli",
+                    "flags",
+                    "commandline"
+                ],
+                "package_type": "shared-library",
+                "settings": {
+                    "os": "Linux",
+                    "arch": "x86_64",
+                    "compiler": "gcc",
+                    "compiler.cppstd": "gnu14",
+                    "compiler.libcxx": "libstdc++11",
+                    "compiler.version": "7",
+                    "build_type": "Release"
+                },
+                "options": {
+                    "namespace": "gflags",
+                    "nothreads": "True",
+                    "shared": "True"
+                },
+                "options_definitions": {
+                    "shared": [
+                        "True",
+                        "False"
+                    ],
+                    "nothreads": [
+                        "True",
+                        "False"
+                    ],
+                    "namespace": [
+                        "ANY"
+                    ]
+                },
+                "generators": [],
+                "system_requires": {},
+                "recipe_folder": "/root/.conan2/p/gflagee0dc74899641/e",
+                "source_folder": null,
+                "build_folder": null,
+                "generators_folder": null,
+                "package_folder": null,
+                "cpp_info": {
+                    "root": {
+                        "includedirs": [
+                            "include"
+                        ],
+                        "srcdirs": null,
+                        "libdirs": [
+                            "lib"
+                        ],
+                        "resdirs": null,
+                        "bindirs": [
+                            "bin"
+                        ],
+                        "builddirs": null,
+                        "frameworkdirs": null,
+                        "system_libs": null,
+                        "frameworks": null,
+                        "libs": null,
+                        "defines": null,
+                        "cflags": null,
+                        "cxxflags": null,
+                        "sharedlinkflags": null,
+                        "exelinkflags": null,
+                        "objects": null,
+                        "sysroot": null,
+                        "requires": null,
+                        "properties": null
+                    }
+                },
+                "label": "gflags/2.2.2",
+                "dependencies": {},
+                "context": "host",
+                "test": false
+            },
+            "3": {
+                "ref": "libunwind/1.6.2#fd89fd4e53ce3f8804ab4b84ced34c9e",
+                "id": "3",
+                "recipe": "Downloaded",
+                "package_id": "21c7a4cfe1e5065ec1814090116f0ba1d4ea2665",
+                "prev": null,
+                "remote": "conancenter",
+                "binary_remote": null,
+                "build_id": null,
+                "binary": "Missing",
+                "invalid_build": false,
+                "info_invalid": null,
+                "name": "libunwind",
+                "user": null,
+                "channel": null,
+                "url": "https://github.com/conan-io/conan-center-index",
+                "license": "MIT",
+                "author": null,
+                "description": "Manipulate the preserved state of each call-frame and resume the execution at any point.",
+                "homepage": "https://github.com/libunwind/libunwind",
+                "build_policy": null,
+                "upload_policy": null,
+                "revision_mode": "hash",
+                "provides": null,
+                "deprecated": null,
+                "win_bash": null,
+                "win_bash_run": null,
+                "default_options": {
+                    "shared": false,
+                    "fPIC": true,
+                    "coredump": true,
+                    "ptrace": true,
+                    "setjmp": true,
+                    "minidebuginfo": true,
+                    "zlibdebuginfo": true
+                },
+                "options_description": null,
+                "version": "1.6.2",
+                "topics": [
+                    "unwind",
+                    "debuggers",
+                    "exception-handling",
+                    "introspection",
+                    "setjmp"
+                ],
+                "package_type": "shared-library",
+                "settings": {
+                    "os": "Linux",
+                    "arch": "x86_64",
+                    "compiler": "gcc",
+                    "compiler.version": "7",
+                    "build_type": "Release"
+                },
+                "options": {
+                    "coredump": "True",
+                    "minidebuginfo": "True",
+                    "ptrace": "True",
+                    "setjmp": "True",
+                    "shared": "True",
+                    "zlibdebuginfo": "True"
+                },
+                "options_definitions": {
+                    "shared": [
+                        "True",
+                        "False"
+                    ],
+                    "coredump": [
+                        "True",
+                        "False"
+                    ],
+                    "ptrace": [
+                        "True",
+                        "False"
+                    ],
+                    "setjmp": [
+                        "True",
+                        "False"
+                    ],
+                    "minidebuginfo": [
+                        "True",
+                        "False"
+                    ],
+                    "zlibdebuginfo": [
+                        "True",
+                        "False"
+                    ]
+                },
+                "generators": [],
+                "system_requires": {},
+                "recipe_folder": "/root/.conan2/p/libunfbb3eb843b237/e",
+                "source_folder": null,
+                "build_folder": null,
+                "generators_folder": null,
+                "package_folder": null,
+                "cpp_info": {
+                    "root": {
+                        "includedirs": [
+                            "include"
+                        ],
+                        "srcdirs": null,
+                        "libdirs": [
+                            "lib"
+                        ],
+                        "resdirs": null,
+                        "bindirs": [
+                            "bin"
+                        ],
+                        "builddirs": null,
+                        "frameworkdirs": null,
+                        "system_libs": null,
+                        "frameworks": null,
+                        "libs": null,
+                        "defines": null,
+                        "cflags": null,
+                        "cxxflags": null,
+                        "sharedlinkflags": null,
+                        "exelinkflags": null,
+                        "objects": null,
+                        "sysroot": null,
+                        "requires": null,
+                        "properties": null
+                    }
+                },
+                "label": "libunwind/1.6.2",
+                "dependencies": {
+                    "4": {
+                        "ref": "xz_utils/5.4.2",
+                        "run": "True",
+                        "libs": "True",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "True",
+                        "build": "False",
+                        "transitive_headers": "None",
+                        "transitive_libs": "None",
+                        "headers": "True",
+                        "package_id_mode": "minor_mode",
+                        "visible": "True"
+                    },
+                    "5": {
+                        "ref": "zlib/1.2.13",
+                        "run": "True",
+                        "libs": "True",
+                        "skip": "False",
+                        "test": "False",
+                        "force": "False",
+                        "direct": "True",
+                        "build": "False",
+                        "transitive_headers": "None",
+                        "transitive_libs": "None",
+                        "headers": "True",
+                        "package_id_mode": "minor_mode",
+                        "visible": "True"
+                    }
+                },
+                "context": "host",
+                "test": false
+            },
+            "4": {
+                "ref": "xz_utils/5.4.2#b6ee8320403def553418874435445982",
+                "id": "4",
+                "recipe": "Downloaded",
+                "package_id": "ac2ccba085e62ae3cdd411efc23757236f94a5d2",
+                "prev": null,
+                "remote": "conancenter",
+                "binary_remote": null,
+                "build_id": null,
+                "binary": "Missing",
+                "invalid_build": false,
+                "info_invalid": null,
+                "name": "xz_utils",
+                "user": null,
+                "channel": null,
+                "url": "https://github.com/conan-io/conan-center-index",
+                "license": [
+                    "Unlicense",
+                    "LGPL-2.1-or-later",
+                    "GPL-2.0-or-later",
+                    "GPL-3.0-or-later"
+                ],
+                "author": null,
+                "description": "XZ Utils is free general-purpose data compression software with a high compression ratio. XZ Utils were written for POSIX-like systems, but also work on some not-so-POSIX systems. XZ Utils are the successor to LZMA Utils.",
+                "homepage": "https://tukaani.org/xz",
+                "build_policy": null,
+                "upload_policy": null,
+                "revision_mode": "hash",
+                "provides": null,
+                "deprecated": null,
+                "win_bash": null,
+                "win_bash_run": null,
+                "default_options": {
+                    "shared": false,
+                    "fPIC": true
+                },
+                "options_description": null,
+                "version": "5.4.2",
+                "topics": [
+                    "lzma",
+                    "xz",
+                    "compression"
+                ],
+                "package_type": "shared-library",
+                "settings": {
+                    "os": "Linux",
+                    "arch": "x86_64",
+                    "compiler": "gcc",
+                    "compiler.version": "7",
+                    "build_type": "Release"
+                },
+                "options": {
+                    "shared": "True"
+                },
+                "options_definitions": {
+                    "shared": [
+                        "True",
+                        "False"
+                    ]
+                },
+                "generators": [],
+                "system_requires": {},
+                "recipe_folder": "/root/.conan2/p/xz_ut55e9abba365d4/e",
+                "source_folder": null,
+                "build_folder": null,
+                "generators_folder": null,
+                "package_folder": null,
+                "cpp_info": {
+                    "root": {
+                        "includedirs": [
+                            "include"
+                        ],
+                        "srcdirs": null,
+                        "libdirs": [
+                            "lib"
+                        ],
+                        "resdirs": null,
+                        "bindirs": [
+                            "bin"
+                        ],
+                        "builddirs": null,
+                        "frameworkdirs": null,
+                        "system_libs": null,
+                        "frameworks": null,
+                        "libs": null,
+                        "defines": null,
+                        "cflags": null,
+                        "cxxflags": null,
+                        "sharedlinkflags": null,
+                        "exelinkflags": null,
+                        "objects": null,
+                        "sysroot": null,
+                        "requires": null,
+                        "properties": null
+                    }
+                },
+                "label": "xz_utils/5.4.2",
+                "dependencies": {},
+                "context": "host",
+                "test": false
+            },
+            "5": {
+                "ref": "zlib/1.2.13#e377bee636333ae348d51ca90874e353",
+                "id": "5",
+                "recipe": "Downloaded",
+                "package_id": "ac2ccba085e62ae3cdd411efc23757236f94a5d2",
+                "prev": null,
+                "remote": "conancenter",
+                "binary_remote": null,
+                "build_id": null,
+                "binary": "Missing",
+                "invalid_build": false,
+                "info_invalid": null,
+                "name": "zlib",
+                "user": null,
+                "channel": null,
+                "url": "https://github.com/conan-io/conan-center-index",
+                "license": "Zlib",
+                "author": null,
+                "description": "A Massively Spiffy Yet Delicately Unobtrusive Compression Library (Also Free, Not to Mention Unencumbered by Patents)",
+                "homepage": "https://zlib.net",
+                "build_policy": null,
+                "upload_policy": null,
+                "revision_mode": "hash",
+                "provides": null,
+                "deprecated": null,
+                "win_bash": null,
+                "win_bash_run": null,
+                "default_options": {
+                    "shared": false,
+                    "fPIC": true
+                },
+                "options_description": null,
+                "version": "1.2.13",
+                "topics": [
+                    "zlib",
+                    "compression"
+                ],
+                "package_type": "shared-library",
+                "settings": {
+                    "os": "Linux",
+                    "arch": "x86_64",
+                    "compiler": "gcc",
+                    "compiler.version": "7",
+                    "build_type": "Release"
+                },
+                "options": {
+                    "shared": "True"
+                },
+                "options_definitions": {
+                    "shared": [
+                        "True",
+                        "False"
+                    ]
+                },
+                "generators": [],
+                "system_requires": {},
+                "recipe_folder": "/root/.conan2/p/zlib15353192ba4c5/e",
+                "source_folder": null,
+                "build_folder": null,
+                "generators_folder": null,
+                "package_folder": null,
+                "cpp_info": {
+                    "root": {
+                        "includedirs": [
+                            "include"
+                        ],
+                        "srcdirs": null,
+                        "libdirs": [
+                            "lib"
+                        ],
+                        "resdirs": null,
+                        "bindirs": [
+                            "bin"
+                        ],
+                        "builddirs": null,
+                        "frameworkdirs": null,
+                        "system_libs": null,
+                        "frameworks": null,
+                        "libs": null,
+                        "defines": null,
+                        "cflags": null,
+                        "cxxflags": null,
+                        "sharedlinkflags": null,
+                        "exelinkflags": null,
+                        "objects": null,
+                        "sysroot": null,
+                        "requires": null,
+                        "properties": null
+                    }
+                },
+                "label": "zlib/1.2.13",
+                "dependencies": {},
+                "context": "host",
+                "test": false
+            },
+            "6": {
+                "ref": "cmake/3.27.0#1916e6ab33353145b93244d065a2c868",
+                "id": "6",
+                "recipe": "Downloaded",
+                "package_id": "63fead0844576fc02943e16909f08fcdddd6f44b",
+                "prev": "ca1493fa25e1944ebc4de1c49ac0fad5",
+                "remote": "conancenter",
+                "binary_remote": "conancenter",
+                "build_id": null,
+                "binary": "Skip",
+                "invalid_build": false,
+                "info_invalid": null,
+                "name": "cmake",
+                "user": null,
+                "channel": null,
+                "url": "https://github.com/conan-io/conan-center-index",
+                "license": "BSD-3-Clause",
+                "author": null,
+                "description": "CMake, the cross-platform, open-source build system.",
+                "homepage": "https://github.com/Kitware/CMake",
+                "build_policy": null,
+                "upload_policy": null,
+                "revision_mode": "hash",
+                "provides": null,
+                "deprecated": null,
+                "win_bash": null,
+                "win_bash_run": null,
+                "default_options": null,
+                "options_description": null,
+                "version": "3.27.0",
+                "topics": [
+                    "build",
+                    "installer"
+                ],
+                "package_type": "application",
+                "settings": {
+                    "os": "Linux",
+                    "arch": "x86_64"
+                },
+                "options": {},
+                "options_definitions": {},
+                "generators": [],
+                "system_requires": {},
+                "recipe_folder": "/root/.conan2/p/cmakee07917bb15291/e",
+                "source_folder": null,
+                "build_folder": null,
+                "generators_folder": null,
+                "package_folder": null,
+                "cpp_info": {
+                    "root": {
+                        "includedirs": [
+                            "include"
+                        ],
+                        "srcdirs": null,
+                        "libdirs": [
+                            "lib"
+                        ],
+                        "resdirs": null,
+                        "bindirs": [
+                            "bin"
+                        ],
+                        "builddirs": null,
+                        "frameworkdirs": null,
+                        "system_libs": null,
+                        "frameworks": null,
+                        "libs": null,
+                        "defines": null,
+                        "cflags": null,
+                        "cxxflags": null,
+                        "sharedlinkflags": null,
+                        "exelinkflags": null,
+                        "objects": null,
+                        "sysroot": null,
+                        "requires": null,
+                        "properties": null
+                    }
+                },
+                "label": "cmake/3.27.0",
+                "dependencies": {},
+                "context": "build",
+                "test": false
+            }
+        },
+        "root": {
+            "0": "None"
+        },
+        "overrides": {},
+        "resolved_ranges": {
+            "cmake/[>=3.16 <4]": "cmake/3.27.0"
+        }
+    }
+}

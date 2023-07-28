@@ -1,0 +1,204 @@
+[
+  {
+    "reference": "conanfile.txt",
+    "is_ref": false,
+    "display_name": "conanfile.txt",
+    "id": "6e6a3e1455b371b406f6bfac6738b77f531ddaf9",
+    "build_id": null,
+    "context": "host",
+    "invalid_build": false,
+    "requires": [
+      "glog/0.6.0"
+    ]
+  },
+  {
+    "revision": "0",
+    "reference": "gflags/2.2.2",
+    "is_ref": true,
+    "display_name": "gflags/2.2.2",
+    "id": "3da3da5b48ef594ead90ea4b18d6ad005e74448c",
+    "build_id": null,
+    "context": "host",
+    "invalid_build": false,
+    "remote": {
+      "name": "conancenter",
+      "url": "https://center.conan.io"
+    },
+    "url": "https://github.com/conan-io/conan-center-index",
+    "homepage": "https://github.com/gflags/gflags",
+    "license": [
+      "BSD-3-Clause"
+    ],
+    "description": "The gflags package contains a C++ library that implements commandline flags processing",
+    "topics": [
+      "cli",
+      "flags",
+      "commandline"
+    ],
+    "provides": [
+      "gflags"
+    ],
+    "recipe": "Downloaded",
+    "package_revision": "0",
+    "binary": "Download",
+    "binary_remote": "conancenter",
+    "creation_date": "2023-03-02 15:52:42 UTC",
+    "required_by": [
+      "glog/0.6.0"
+    ]
+  },
+  {
+    "revision": "0",
+    "reference": "glog/0.6.0",
+    "is_ref": true,
+    "display_name": "glog/0.6.0",
+    "id": "f5a58e5ea2abfb62dbbe3c8d93b9dff02832a113",
+    "build_id": null,
+    "context": "host",
+    "invalid_build": false,
+    "remote": {
+      "name": "conancenter",
+      "url": "https://center.conan.io"
+    },
+    "url": "https://github.com/conan-io/conan-center-index",
+    "homepage": "https://github.com/google/glog/",
+    "license": [
+      "BSD-3-Clause"
+    ],
+    "description": "Google logging library",
+    "topics": [
+      "logging"
+    ],
+    "provides": [
+      "glog"
+    ],
+    "recipe": "Downloaded",
+    "package_revision": "0",
+    "binary": "Download",
+    "binary_remote": "conancenter",
+    "creation_date": "2023-04-25 11:46:31 UTC",
+    "required_by": [
+      "conanfile.txt"
+    ],
+    "requires": [
+      "gflags/2.2.2",
+      "libunwind/1.6.2"
+    ]
+  },
+  {
+    "revision": "0",
+    "reference": "libunwind/1.6.2",
+    "is_ref": true,
+    "display_name": "libunwind/1.6.2",
+    "id": "db8fd6f82114a97a79829b991e6a38a63da2ec84",
+    "build_id": null,
+    "context": "host",
+    "invalid_build": false,
+    "remote": {
+      "name": "conancenter",
+      "url": "https://center.conan.io"
+    },
+    "url": "https://github.com/conan-io/conan-center-index",
+    "homepage": "https://github.com/libunwind/libunwind",
+    "license": [
+      "MIT"
+    ],
+    "description": "Manipulate the preserved state of each call-frame and resume the execution at any point.",
+    "topics": [
+      "unwind",
+      "debuggers",
+      "exception-handling",
+      "introspection",
+      "setjmp"
+    ],
+    "provides": [
+      "libunwind"
+    ],
+    "recipe": "Downloaded",
+    "package_revision": "0",
+    "binary": "Download",
+    "binary_remote": "conancenter",
+    "creation_date": "2023-07-04 17:19:44 UTC",
+    "required_by": [
+      "glog/0.6.0"
+    ],
+    "requires": [
+      "xz_utils/5.4.2",
+      "zlib/1.2.13"
+    ]
+  },
+  {
+    "revision": "0",
+    "reference": "xz_utils/5.4.2",
+    "is_ref": true,
+    "display_name": "xz_utils/5.4.2",
+    "id": "5246c0bd84cb3855ffc2a458086a0813344953bf",
+    "build_id": null,
+    "context": "host",
+    "invalid_build": false,
+    "remote": {
+      "name": "conancenter",
+      "url": "https://center.conan.io"
+    },
+    "url": "https://github.com/conan-io/conan-center-index",
+    "homepage": "https://tukaani.org/xz",
+    "license": [
+      "Unlicense",
+      "LGPL-2.1-or-later",
+      "GPL-2.0-or-later",
+      "GPL-3.0-or-later"
+    ],
+    "description": "XZ Utils is free general-purpose data compression software with a high compression ratio. XZ Utils were written for POSIX-like systems, but also work on some not-so-POSIX systems. XZ Utils are the successor to LZMA Utils.",
+    "topics": [
+      "lzma",
+      "xz",
+      "compression"
+    ],
+    "provides": [
+      "xz_utils"
+    ],
+    "recipe": "Downloaded",
+    "package_revision": "0",
+    "binary": "Download",
+    "binary_remote": "conancenter",
+    "creation_date": "2023-04-06 13:08:00 UTC",
+    "required_by": [
+      "libunwind/1.6.2"
+    ]
+  },
+  {
+    "revision": "0",
+    "reference": "zlib/1.2.13",
+    "is_ref": true,
+    "display_name": "zlib/1.2.13",
+    "id": "5246c0bd84cb3855ffc2a458086a0813344953bf",
+    "build_id": null,
+    "context": "host",
+    "invalid_build": false,
+    "remote": {
+      "name": "conancenter",
+      "url": "https://center.conan.io"
+    },
+    "url": "https://github.com/conan-io/conan-center-index",
+    "homepage": "https://zlib.net",
+    "license": [
+      "Zlib"
+    ],
+    "description": "A Massively Spiffy Yet Delicately Unobtrusive Compression Library (Also Free, Not to Mention Unencumbered by Patents)",
+    "topics": [
+      "zlib",
+      "compression"
+    ],
+    "provides": [
+      "zlib"
+    ],
+    "recipe": "Downloaded",
+    "package_revision": "0",
+    "binary": "Download",
+    "binary_remote": "conancenter",
+    "creation_date": "2023-04-27 12:11:20 UTC",
+    "required_by": [
+      "libunwind/1.6.2"
+    ]
+  }
+]

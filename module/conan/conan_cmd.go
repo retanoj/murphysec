@@ -11,6 +11,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"strconv"
 	"strings"
 )
 
@@ -21,6 +22,11 @@ type CmdInfo struct {
 
 func (c CmdInfo) String() string {
 	return fmt.Sprintf("[%s]%s", c.Version, c.Path)
+}
+
+func (c CmdInfo) MajorVersion() uint8 {
+	i, _ := strconv.Atoi(string(c.Version[0]))
+	return uint8(i)
 }
 
 var _conanCmdInfo any
@@ -50,21 +56,38 @@ func getConanInfo(ctx context.Context) (*CmdInfo, error) {
 	return r, nil
 }
 
-func ExecuteConanInfoCmd(ctx context.Context, conanPath string, dir string) (string, error) {
+func ExecuteConanInfoCmd(ctx context.Context, cmdInfo *CmdInfo, dir string) (string, error) {
 	logger := utils.UseLogger(ctx)
 	lp := utils.NewLogPipe(logger, "conan")
 	defer lp.Close()
 	jsonP := getConanInfoJsonPath()
 	logger.Sugar().Debugf("temp file: %s", jsonP)
-	c := exec.Command(conanPath, "info", ".", "-j", jsonP)
-	logger.Sugar().Infof("Command: %s", c.String())
-	c.Env = getEnvForConan()
-	c.Dir = dir
+
+	var c *exec.Cmd
+
 	sb := utils.MkSuffixBuffer(1024)
 	logPipe := utils.NewLogPipe(logger, "conan")
 	defer logPipe.Close()
-	c.Stdout = io.MultiWriter(sb, logPipe)
-	c.Stderr = io.MultiWriter(sb, logPipe)
+
+	switch cmdInfo.MajorVersion() {
+	case 1:
+		c = exec.Command(cmdInfo.Path, "info", ".", "-j", jsonP)
+		c.Stdout = io.MultiWriter(sb, logPipe)
+		c.Stderr = io.MultiWriter(sb, logPipe)
+	case 2:
+		c = exec.Command(cmdInfo.Path, "graph", "info", ".", "-f", "json")
+		f, _ := os.OpenFile(jsonP, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+		defer f.Close()
+		c.Stdout = f
+		c.Stderr = io.MultiWriter(sb, logPipe)
+	default:
+		conanErr := conanError("not support conan version")
+		return "", conanErr
+	}
+
+	logger.Sugar().Infof("Command: %s", c.String())
+	c.Env = getEnvForConan()
+	c.Dir = dir
 	if e := c.Run(); e != nil {
 		logger.Warn("Conan command exit with error", zap.Error(e))
 		conanErr := conanError(sb.Bytes())

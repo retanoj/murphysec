@@ -2,6 +2,7 @@ package conan
 
 import (
 	"context"
+	"fmt"
 	"github.com/murphysecurity/murphysec/utils/must"
 	"github.com/pkg/errors"
 	"os"
@@ -16,4 +17,14 @@ func TestGetConanVersion(t *testing.T) {
 		return
 	}
 	t.Log(GetConanVersion(context.TODO(), must.A(LocateConan(context.TODO()))))
+}
+
+func TestGetConanInfo(t *testing.T) {
+	conanInfo, e := getConanInfo(context.TODO())
+	if e != nil {
+		t.Error(e)
+	}
+
+	t.Log(conanInfo)
+	t.Log(fmt.Sprintf("MajorVersion: %d", conanInfo.MajorVersion()))
 }

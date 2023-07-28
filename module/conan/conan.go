@@ -37,7 +37,7 @@ func (*Inspector) InspectProject(ctx context.Context) error {
 		task.UI().Display(display.MsgWarn, fmt.Sprintf("[%s]通过 conan 获取依赖信息失败，可能会导致检测结果不完整或失败，访问 https://www.murphysec.com/docs/quick-start/language-support/ 了解详情", task.ScanDir))
 		return e
 	}
-	jsonFilePath, e := ExecuteConanInfoCmd(ctx, cmdInfo.Path, task.ScanDir)
+	jsonFilePath, e := ExecuteConanInfoCmd(ctx, cmdInfo, task.ScanDir)
 
 	var conanErr conanError
 	if errors.As(e, &conanErr) {
@@ -55,7 +55,13 @@ func (*Inspector) InspectProject(ctx context.Context) error {
 			logger.Error("Can't remove temp file", zap.Error(e), zap.Any("path", jsonFilePath))
 		}
 	}()
-	var conanJson _ConanInfoJsonFile
+	var conanJson _ConanInfo
+	switch cmdInfo.MajorVersion() {
+	case 1:
+		conanJson = &_ConanInfoJsonFile{}
+	case 2:
+		conanJson = &_Conan2InfoJsonFile{}
+	}
 	if e := conanJson.ReadFromFile(jsonFilePath); e != nil {
 		return e
 	}
